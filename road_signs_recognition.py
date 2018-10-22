@@ -1,11 +1,13 @@
 import os
 import random
+import skimage.color
 import skimage.data
 import skimage.transform
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
+#
 def load_data(data_dir):
     """Loads a data set and returns two lists:
     
@@ -38,10 +40,13 @@ test_data_dir = os.path.join(ROOT_PATH, "BelgiumTS/Testing")
 
 images, labels = load_data(train_data_dir)
 
+# Print number of images.
 print("Unique Labels: {0}\nTotal Images: {1}".format(len(set(labels)), len(images)))
 
-def display_images_and_labels(images, labels):
+#
+def display_images_and_labels(images, labels, cmap):
     """Display the first image of each label."""
+    cmap = cmap
     unique_labels = set(labels)
     plt.figure(figsize=(15, 15))
     i = 1
@@ -52,13 +57,15 @@ def display_images_and_labels(images, labels):
         plt.axis('off')
         plt.title("Label {0} ({1})".format(label, labels.count(label)))
         i += 1
-        _ = plt.imshow(image)
+        _ = plt.imshow(image, cmap)
     plt.show()
 
-#display_images_and_labels(images, labels)
+display_images_and_labels(images, labels, "hsv")
 
-def display_label_images(images, label):
+#
+def display_label_images(images, label, cmap):
     """Display images of a specific label."""
+    cmap = cmap
     limit = 24  # show a max of 24 images
     plt.figure(figsize=(15, 5))
     i = 1
@@ -69,7 +76,27 @@ def display_label_images(images, label):
         plt.subplot(3, 8, i)  # 3 rows, 8 per row
         plt.axis('off')
         i += 1
-        plt.imshow(image)
+        plt.imshow(image, cmap)
     plt.show()
 
-#display_label_images(images, 32)
+display_label_images(images, 32, "hsv")
+
+# Print size of first 5 images.
+for image in images[:5]:
+    print("shape: {0}, min: {1}, max: {2}".format(image.shape, image.min(), image.max()))
+
+# Convert images to grayscale
+images = [skimage.color.rgb2gray(image)
+                for image in images]
+
+display_images_and_labels(images, labels, "gray")
+
+# Resize images to 32x32
+images32 = [skimage.transform.resize(image, (32, 32), mode='constant')
+                for image in images]
+
+display_images_and_labels(images32, labels, "gray")
+
+# Print size of first 5 resized images.
+for image in images[:5]:
+    print("shape: {0}, min: {1}, max: {2}".format(image.shape, image.min(), image.max()))
