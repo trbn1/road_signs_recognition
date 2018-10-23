@@ -39,9 +39,11 @@ train_data_dir = os.path.join(ROOT_PATH, "BelgiumTS/Training")
 test_data_dir = os.path.join(ROOT_PATH, "BelgiumTS/Testing")
 
 images, labels = load_data(train_data_dir)
+images_test, labels_test = load_data(test_data_dir)
 
 # Print number of images.
-print("Unique Labels: {0}\nTotal Images: {1}".format(len(set(labels)), len(images)))
+print("Training set:\nUnique Labels: {0}\nTotal Images: {1}\n".format(len(set(labels)), len(images)))
+print("Test set:\nUnique Labels: {0}\nTotal Images: {1}\n".format(len(set(labels_test)), len(images_test)))
 
 #
 def display_images_and_labels(images, labels, cmap):
@@ -89,11 +91,17 @@ for image in images[:5]:
 images = [skimage.color.rgb2gray(image)
                 for image in images]
 
+images_test = [skimage.color.rgb2gray(image)
+                for image in images_test]
+
 display_images_and_labels(images, labels, "gray")
 
 # Resize images to 32x32
 images32 = [skimage.transform.resize(image, (32, 32), mode='constant')
                 for image in images]
+
+images32_test = [skimage.transform.resize(image, (32, 32), mode='constant')
+                for image in images_test]
 
 display_images_and_labels(images32, labels, "gray")
 
