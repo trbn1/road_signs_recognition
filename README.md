@@ -26,7 +26,7 @@ datasets/BelgiumTS/Testing/
 * Configure your software to use Anaconda enviornment
 * Unpack dataset to project directory as explained earlier
 * Cd to project directory
-* Execute *python road_signs_recognition.py*
+* Execute *python main.py*
 
 ## References
 
