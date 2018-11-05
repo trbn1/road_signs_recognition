@@ -32,4 +32,6 @@ datasets/BelgiumTS/Testing/
 
 [Belgian Traffic Sign Dataset - BelgiumTS](https://btsd.ethz.ch/shareddata/)
 
+[German Traffic Sign Recognition Dataset - GTSRB](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset#Downloads)
+
 [Traffic Sign Recognition with TensorFlow by Waleed Adbulla](https://medium.com/@waleedka/traffic-sign-recognition-with-tensorflow-629dffc391a6)
