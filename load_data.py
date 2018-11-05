@@ -6,6 +6,8 @@ This is a script used for loading data from files into array.
 import os
 import skimage.data
 
+from sklearn.model_selection import train_test_split
+
 
 def load_data(data_dir):
     """Loads a data set and returns two lists:
@@ -30,4 +32,4 @@ def load_data(data_dir):
         for f in file_names:
             images.append(skimage.data.imread(f))
             labels.append(int(d))
-    return images, labels
+    return train_test_split(images, labels, stratify=labels)
