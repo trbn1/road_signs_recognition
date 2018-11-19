@@ -3,14 +3,9 @@
 """
 This is a script used for classifying given image.
 """
-import skimage.data
-
 from load_data import load_image
-from numpy import reshape
 from preprocess import preprocess_single
-from skimage import color, transform
 from sklearn.externals import joblib
-from sklearn.metrics import classification_report
 
 
 # Load model from file.
