@@ -1,0 +1,62 @@
+Wyboista droga
+Ostrzezenie o progu zwalniajacym
+Ostrzezenie o sliskiej nawierzchni
+Ostrzezenie o ostrym zakrecie w lewo
+Ostrzezenie o ostrym zakrecie w prawo
+Zakret w prawo, nastepnie zakret w lewo
+Zakret w lewo, nastepnie zakret w prawo
+Ostrzezenie o miejscu gdzie przechodza dzieci
+Ostrzezenie o przejezdzie dla rowerow
+Ostrzezenie o przejsciu dla bydla
+Ostrzezenie o robotach drogowych
+Ostrzezenie o sygnalizatorze drogowym
+Ostrzezenie o przejezdzie kolejowym ze szlabanem
+Znak uwagi (!)
+Ostrzezenie o zwezeniu obustronnym
+Ostrzezenie o zwezeniu lewostronnym
+Ostrzezenie o zwezeniu prawostronnym
+Ostrzezenie o pierwszenstwie na nastepnym skrzyzowaniu
+Ostrzezenie o skrzyzowaniu z pierwszenstwem z prawej strony
+Ustap pierwszenstwa
+Waska droga, ustap pierwszenstwa
+Znak stopu
+Zakaz wjazdu
+Zakaz wjazdu dla rowerow
+Zakaz wjazdu dla pojazdow o masie wiekszej niz X
+Zakaz wjazdu dla ciezarowek
+Zakaz wjazdu dla pojazdow szerszych niz X
+Zakaz wjazdu dla pojazdow wyzszych niz X
+Zakaz wjazdu z obu stron
+Zakaz skretu w lewo
+Zakaz skretu w prawo
+Zakaz wyprzedzania
+Ograniczenie predkosci do X
+Droga dla pieszych i rowerzystow
+Nakaz jazdy prosto
+Nakaz jazdy w lewo
+Nakaz jazdy w prawo lub prosto
+Rondo
+Droga rowerowa
+Droga dla pieszych obok drogi dla rowerzystow
+Zakaz parkowania
+Zakaz postoju
+Zakaz parkowania od 1-go dnia miesiaca do 15-go
+Zakaz parkowania od 16-go dnia miesiaca do 31-go
+Waska droga z pierwszenstwem
+Parking
+Parking dla inwalidow
+Parking dla motocykli, samochodow i minibusow
+Parking dla ciezarowek
+Parking dla autokarow
+Parking na chodniku
+Strefa zamieszkania
+Koniec strefy zamieszkania
+Droga jednokierunkowa
+Droga bez wyjazdu
+Koniec robot drogowych
+Przejscie dla pieszych
+Przejazd rowerowy
+Znak wskazujacy parking
+Znak informujacy o progu zwalniajacym
+Koniec drogi z pierwszenstwem
+Droga z pierwszenstwem
