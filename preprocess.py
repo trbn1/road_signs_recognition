@@ -21,3 +21,15 @@ def preprocess(images):
     # 3D to 2D.
     images32_size = len(images32)
     return reshape(images32, (images32_size, -1))
+
+def preprocess_single(image):
+    """Conver single image to grayscale, then resize it to 32x32
+    and reshape array dimension"""
+    # Convert image to grayscale.
+    image = color.rgb2gray(image)
+
+    # Resize image to 32x32.
+    image32 = transform.resize(image, (32, 32), mode='constant')
+
+    # Reshape.
+    return reshape(image32, (1, -1))
