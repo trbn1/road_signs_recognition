@@ -14,7 +14,7 @@ from sklearn.metrics import classification_report
 
 
 # Load model from file.
-model = joblib.load('models/predict_signs_model.pkl')
+model = joblib.load('models/predict_signs_model_50.pkl')
 
 # Test image file location.
 image = 'test_images/1.png'
