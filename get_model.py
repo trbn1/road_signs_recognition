@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 
+"""
+This is a script used for training chosen classifier, using a given dataset.
+"""
 import display_info as di
 import model as m
 
 from load_data import load_data
 from preprocess import preprocess
+from sklearn.externals import joblib
 from sklearn.metrics import classification_report
 
 
@@ -27,6 +31,8 @@ X_test = preprocess(X_test)
 # Train model.
 model = m.train_model(X_train, y_train)
 print('Model parameters:\n', model)
+# Export model to file
+joblib.dump(model, 'models/predict_signs_model.pkl', compress=9)
 # Predictions
 predictions = m.predict(model, X_test)
 print('Classification report:\n', classification_report(y_test, predictions))
