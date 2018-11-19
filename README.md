@@ -1,12 +1,12 @@
 # Road Signs Recognition
 
-Road Signs Recognition using multilayer perceptron neural network algorithm (WIP)
+Road Signs Recognition using multilayer perceptron neural network algorithm
 
 ## Dependencies
 
 Following software was tested and executed using Anaconda 5.3.0 on Windows.
 
-*road_signs_recognition.py* expects image files with road signs under *dataset* directory
+*get_model.py* expects image files with road signs under *dataset* directory
 
 During develompent phase we are using Belgian Traffic Sign Dataset linked in references, specifically:
 
@@ -26,7 +26,16 @@ datasets/BelgiumTS/Testing/
 * Configure your software to use Anaconda enviornment
 * Unpack dataset to project directory as explained earlier
 * Cd to project directory
-* Execute *python main.py*
+
+To train the classifier:
+```
+python get_model.py
+```
+
+To classify a single image, using a pre-trained classifier:
+```
+python classify.py
+```
 
 ## References
 
