@@ -15,7 +15,7 @@ def preprocess(images):
                 for image in images]
 
     # Resize images to 32x32.
-    images32 = [transform.resize(image, (32, 32), mode='constant')
+    images32 = [transform.resize(image, (32, 32), mode='constant', anti_aliasing=True)
                 for image in images]
 
     # 3D to 2D.
@@ -29,7 +29,7 @@ def preprocess_single(image):
     image = color.rgb2gray(image)
 
     # Resize image to 32x32.
-    image32 = transform.resize(image, (32, 32), mode='constant')
+    image32 = transform.resize(image, (32, 32), mode='constant', anti_aliasing=True)
 
     # Reshape.
     return reshape(image32, (1, -1))
