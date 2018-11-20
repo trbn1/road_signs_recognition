@@ -32,6 +32,7 @@ def load_data(data_dir):
             labels.append(int(directory))
     return train_test_split(images, labels, random_state=0, stratify=labels)
 
+
 def load_image(image):
     """Load a single image from file and return it in a Numpy array."""
     return skimage.data.imread(image)

@@ -22,6 +22,7 @@ def preprocess(images):
     images32_size = len(images32)
     return reshape(images32, (images32_size, -1))
 
+
 def preprocess_single(image):
     """Conver single image to grayscale, then resize it to 32x32
     and reshape array dimension"""

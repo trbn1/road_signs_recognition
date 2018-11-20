@@ -8,6 +8,7 @@ from sklearn.externals import joblib
 from load_data import load_image
 from preprocess import preprocess_single
 
+
 def classify():
     """Classify given image file and return detected sign name."""
     # Load model from file.

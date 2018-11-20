@@ -13,6 +13,7 @@ def train_model(images, labels):
     mlp.fit(images, labels)
     return mlp
 
+
 def predict(model, test_images):
     """Get predictions."""
     predictions = model.predict(test_images)
