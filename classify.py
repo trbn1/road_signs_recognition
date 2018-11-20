@@ -30,11 +30,12 @@ def classify(model_location, image_location, results_location, print_result=Fals
     for i in range(end):
         if prediction[0] == i:
             result = results[i]
+            label = i
 
     if print_result:
         print('\nLabel of predicted road sign: ', prediction[0])
         print('Name of predicted road sign: ', result)
-    return result
+    return result, label
 
 
 # Model file location.
@@ -42,7 +43,7 @@ MODEL_LOCATION = 'models/predict_signs_model_50.pkl'
 # Test image file location.
 IMAGE_LOCATION = 'test_images/1.png'
 # Detected signs names file location.
-RESULTS_LOCATION = 'test_images/results_en.txt'
+RESULTS_LOCATION = 'reference_images/results_en.txt'
 
 
 if __name__ == '__main__':

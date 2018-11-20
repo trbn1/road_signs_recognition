@@ -17,7 +17,7 @@ class ClassifyGUI(QDialog):
         super(ClassifyGUI, self).__init__(parent)
 
         self.model_location = 'models/predict_signs_model_50.pkl'
-        self.results_location = 'test_images/results_en.txt'
+        self.results_location = 'reference_images/results_en.txt'
         self.file_location = None
         self.result = None
 
@@ -36,6 +36,7 @@ class ClassifyGUI(QDialog):
         main_layout.addWidget(self.top_left_group_box, 1, 0)
         main_layout.addWidget(self.top_left_image, 1, 0)
         main_layout.addWidget(self.top_right_group_box, 1, 1)
+        main_layout.addWidget(self.top_right_image, 1, 1)
         main_layout.addLayout(bottom_left_layout, 2, 0)
         main_layout.addWidget(self.bottom_right_group_box, 2, 1)
         main_layout.addWidget(self.bottom_right_text, 2, 1)
@@ -46,6 +47,7 @@ class ClassifyGUI(QDialog):
         self.setLayout(main_layout)
 
         self.setWindowTitle("Road Signs Recognition")
+        self.setFixedSize(628, 394)
 
 
     def create_top_left_group_box(self):
@@ -118,14 +120,17 @@ class ClassifyGUI(QDialog):
         """Recognize road sign on a given image file."""
         if self.model_location and self.file_location and self.results_location:
             self.bottom_right_text.setText('')
-            result = classify(self.model_location, self.file_location, self.results_location)
+            result, label = classify(self.model_location, self.file_location, self.results_location)
             self.bottom_right_text.setText(result)
+            ref_image = 'reference_images/' + str(label) + '.png'
+            self.top_right_image.setPixmap(QPixmap(ref_image))
 
 
 if __name__ == '__main__':
     import sys
 
     APP = QApplication(sys.argv)
+    APP.setAttribute(Qt.AA_DisableWindowContextHelpButton)
     GUI = ClassifyGUI()
     GUI.show()
     sys.exit(APP.exec_())
