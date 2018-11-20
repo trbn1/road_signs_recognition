@@ -35,7 +35,7 @@ def classify():
 
 
 # Model file location.
-MODEL_LOCATION = joblib.load('models/predict_signs_model_50.pkl')
+MODEL_LOCATION = 'models/predict_signs_model_50.pkl'
 # Test image file location.
 IMAGE_LOCATION = 'test_images/1.png'
 # Detected signs names file location.
