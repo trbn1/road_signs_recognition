@@ -39,7 +39,7 @@ MODEL_LOCATION = 'models/predict_signs_model_50.pkl'
 # Test image file location.
 IMAGE_LOCATION = 'test_images/1.png'
 # Detected signs names file location.
-RESULTS_LOCATION = 'test_images/results.txt'
+RESULTS_LOCATION = 'test_images/results_en.txt'
 
 
 if __name__ == '__main__':

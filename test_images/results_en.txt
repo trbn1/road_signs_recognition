@@ -1,0 +1,62 @@
+Bumpy road
+Speed bumb
+Slippery road
+Dangerous left curve
+Dangerous right curve
+Right curve followed by left curve
+Left curve followed by right curve
+Place where a lot of children come
+Bicycle crossing
+Cattle crossing
+Construction
+Traffic lights
+Railway crossing with gates
+Caution sign
+Road narrows (both sides)
+Road narrows (left side)
+Road narrows (right side)
+Priority at next intersection
+Intersection with priority to the right
+Give way
+Narrow passage, give way to traffic from opposite side
+Stop and give way
+No entry
+No entry for bicycles
+No entry for vehicles with more mass than indicated
+No entry for vehicles used for goods transport
+No entry for vehicles which are wider than indicated
+No entry for vehicles which are higher than indicated
+No entry in both directions
+No turn left allowed
+No turn right allowed
+No overtaking
+Speed limit
+Part of the road reserved for cyclists and pedestrians
+Mandatory to drive straight
+Mandatory to drive left
+Mandatory to drive right
+Roundabout
+Mandatory cycleway
+Part of the road reserved for pedestrians and cyclists
+No parking allowed
+No parking or standing still allowed
+No parking allowed on this side of the road from 1st day of the month until the 15th
+No parking allowed on this side of the road from the 16th day of the month until the last
+Narrow passage, priority over traffic from opposite side
+Parking allowed
+Parking for disabled
+Parking exclusively for motorcycles, motorcars and minibuses
+Parking exclusively for lorries
+Parking exclusively for tourist buses
+Parking mandatory on pavement or verge
+Residential zone
+End of residential zone
+Road with one-way traffic
+No exit
+End of road works
+Pedestrian crossing
+Bicycle crossing
+Indicating parking
+Speed bump
+End of priority road
+Priority road
