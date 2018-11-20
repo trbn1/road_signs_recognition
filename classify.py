@@ -9,20 +9,19 @@ from load_data import load_image
 from preprocess import preprocess_single
 
 
-def classify():
+def classify(model_location, image_location, results_location, print_result=False):
     """Classify given image file and return detected sign name."""
     # Load model from file.
-    model = joblib.load(MODEL_LOCATION)
+    model = joblib.load(model_location)
 
     # Load and preprocess the image.
-    image = preprocess_single(load_image(IMAGE_LOCATION))
+    image = preprocess_single(load_image(image_location))
 
     # Predict road sign.
     prediction = model.predict(image)
-    print('\nLabel of predicted road sign: ', prediction[0])
 
     # Load available road signs names.
-    with open(RESULTS_LOCATION) as file_name:
+    with open(results_location) as file_name:
         results = file_name.readlines()
     results = [x.strip() for x in results]
 
@@ -31,7 +30,11 @@ def classify():
     for i in range(end):
         if prediction[0] == i:
             result = results[i]
-    print('Name of predicted road sign: ', result)
+
+    if print_result:
+        print('\nLabel of predicted road sign: ', prediction[0])
+        print('Name of predicted road sign: ', result)
+    return result
 
 
 # Model file location.
@@ -43,4 +46,4 @@ RESULTS_LOCATION = 'test_images/results_en.txt'
 
 
 if __name__ == '__main__':
-    classify()
+    classify(MODEL_LOCATION, IMAGE_LOCATION, RESULTS_LOCATION, True)
