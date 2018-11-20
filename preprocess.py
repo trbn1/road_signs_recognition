@@ -12,7 +12,7 @@ def preprocess(images):
     and reshape array dimension from 3D to 2D"""
     # Convert images to grayscale.
     images = [color.rgb2gray(image)
-                for image in images]
+              for image in images]
 
     # Resize images to 32x32.
     images32 = [transform.resize(image, (32, 32), mode='constant', anti_aliasing=True)
