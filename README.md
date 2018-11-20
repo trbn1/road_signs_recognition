@@ -37,6 +37,11 @@ To classify a single image, using a pre-trained classifier:
 python classify.py
 ```
 
+To start a graphical interface for classifying images:
+```
+python classify_gui.py
+```
+
 ## References
 
 [Belgian Traffic Sign Dataset - BelgiumTS](https://btsd.ethz.ch/shareddata/)
