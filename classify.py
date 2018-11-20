@@ -27,7 +27,7 @@ def classify():
     results = [x.strip() for x in results]
 
     # Print road sign name.
-    end = 62
+    end = len(results)
     for i in range(end):
         if prediction[0] == i:
             result = results[i]
