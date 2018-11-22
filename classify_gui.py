@@ -16,7 +16,7 @@ class ClassifyGUI(QDialog):
     def __init__(self, parent=None):
         super(ClassifyGUI, self).__init__(parent)
 
-        self.model_location = 'models/predict_signs_model_50.pkl'
+        self.model_location = 'models/predict_signs_model_500.pkl'
         self.results_location = 'reference_images/results_en.txt'
         self.file_location = None
         self.result = None
