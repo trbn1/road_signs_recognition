@@ -39,7 +39,7 @@ def classify(model_location, image_location, results_location, print_result=Fals
 
 
 # Model file location.
-MODEL_LOCATION = 'models/predict_signs_model_500.pkl'
+MODEL_LOCATION = 'models/predict_signs_model_50.pkl'
 # Test image file location.
 IMAGE_LOCATION = 'test_images/1.png'
 # Detected signs names file location.
