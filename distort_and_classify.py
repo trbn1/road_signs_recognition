@@ -83,7 +83,7 @@ if __name__ == '__main__':
     else:
         # Blur loop.
         for i in range(BLUR_ITERATIONS):
-            BLURRED_IMAGE = add_blur(load_image(IMAGE_LOCATION), (i / MAX_BLUR) / 7)
+            BLURRED_IMAGE = add_blur(load_image(IMAGE_LOCATION), (i / MAX_BLUR) / 5)
             #imwrite('tmp/' + str(i) + '.png', BLURRED_IMAGE)
             #print('Current blur amount: ', i + (i / BLUR_ITERATIONS))
             result, label = classify(MODEL_LOCATION, BLURRED_IMAGE, RESULTS_LOCATION, False, True)
