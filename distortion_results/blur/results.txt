@@ -1,0 +1,8 @@
+test_image,label,first_error
+1.png,30,0.3084
+2.png,22,0.9912
+3.png,32,no_error
+5.png,21,0.8131
+14.png,8,0.1352
+17.png,13,0.7697
+18.png,19,0.5885
