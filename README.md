@@ -42,6 +42,11 @@ To start a graphical interface for classifying images:
 python classify_gui.py
 ```
 
+To run road signs classifying accuracy tests with added noise or blur (parameters configured inside .py file):
+```
+python distort_and_classify.py
+```
+
 ## References
 
 [Belgian Traffic Sign Dataset - BelgiumTS](https://btsd.ethz.ch/shareddata/)
