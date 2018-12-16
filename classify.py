@@ -9,13 +9,16 @@ from load_data import load_image
 from preprocess import preprocess_single
 
 
-def classify(model_location, image_location, results_location, print_result=False):
+def classify(model_location, image_location, results_location, print_result=False, array=False):
     """Classify given image file and return detected sign name."""
     # Load model from file.
     model = joblib.load(model_location)
 
     # Load and preprocess the image.
-    image = preprocess_single(load_image(image_location))
+    if array is False:
+        image = preprocess_single(load_image(image_location))
+    else:
+        image = preprocess_single(image_location)
 
     # Predict road sign.
     prediction = model.predict(image)
